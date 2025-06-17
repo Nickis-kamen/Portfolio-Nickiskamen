@@ -17,9 +17,9 @@ const projects = [
   {
     title: 'Portfolio Personnel',
     description: 'Portfolio personnel avec sections projets, compétences, et contact.',
-    image: 'https://source.unsplash.com/600x400/?movies,streaming',
+    image: '/src/assets/portfolio.png',
     tech: ['VueJs', 'Tailwind', 'Formspree', 'Vue3Toastify', 'AOS'],
-    link: '#'
+    link: 'https://github.com/Nickis-kamen/Portfolio-Nickiskamen'
   },
   {
     title: 'Réparation Auto',
@@ -52,7 +52,7 @@ const projects = [
             data-aos-duration="900"
             data-aos-easing="ease-in-out"
           >
-            <img :src="project.image" alt="project image" class="h-48 w-full object-cover" />
+            <img :src="project.image" alt="project image" class="h-48 w-full object-cover rounded-tl-3xl rounded-tr-3xl"  />
             <div class="p-6 flex flex-col justify-between h-full">
               <div>
                 <h3 class="text-xl font-bold text-white mb-2">{{ project.title }}</h3>

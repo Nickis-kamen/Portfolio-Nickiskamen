@@ -1,6 +1,14 @@
 <script setup>
-  import bg from '../assets/bg-red.gif';
+import { ref } from 'vue'
+import bg from '../assets/bg-red.gif'
+
+const showMobileMenu = ref(false)
+
+const toggleMobileMenu = () => {
+  showMobileMenu.value = !showMobileMenu.value
+}
 </script>
+
 
 <template>
   <section
@@ -15,7 +23,7 @@
           Nickis<span class="text-gray-300">Kamen</span>
         </div>
 
-        <!-- Menu -->
+        <!-- Menu desktop -->
         <ul class="hidden md:flex gap-8 text-sm md:text-base text-white font-medium">
           <li><a href="#" class="hover:text-red-400 transition duration-300">Accueil</a></li>
           <li><a href="#projects" class="hover:text-red-400 transition duration-300">Projets</a></li>
@@ -23,14 +31,28 @@
           <li><a href="#contact" class="hover:text-red-400 transition duration-300">Contact</a></li>
         </ul>
 
-        <!-- Mobile toggle (futur menu mobile à ajouter) -->
-        <button class="md:hidden text-white focus:outline-none">
+        <!-- Bouton mobile -->
+        <button @click="toggleMobileMenu" class="md:hidden text-white focus:outline-none">
           <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
           </svg>
         </button>
       </div>
+
+      <!-- Menu mobile -->
+      <transition name="fade">
+        <ul
+          v-if="showMobileMenu"
+          class="md:hidden mt-4 flex flex-col items-center gap-4 text-white font-medium bg-black/80 backdrop-blur-md rounded-xl px-6 py-4"
+        >
+          <li><a href="#" @click="toggleMobileMenu" class="hover:text-red-400 transition">Accueil</a></li>
+          <li><a href="#projects" @click="toggleMobileMenu" class="hover:text-red-400 transition">Projets</a></li>
+          <li><a href="#skills" @click="toggleMobileMenu" class="hover:text-red-400 transition">Compétences</a></li>
+          <li><a href="#contact" @click="toggleMobileMenu" class="hover:text-red-400 transition">Contact</a></li>
+        </ul>
+      </transition>
     </nav>
+
 
     <!-- Contenu principal -->
     <div class="bg-black/90 backdrop-blur-sm py-10 px-6 md:px-16 flex flex-col md:flex-row items-center justify-between gap-8 w-full min-h-screen pt-32">
@@ -91,4 +113,11 @@
 </template>
 
 <style scoped>
+.fade-enter-active, .fade-leave-active {
+  transition: opacity 0.3s ease;
+}
+.fade-enter-from, .fade-leave-to {
+  opacity: 0;
+}
+
 </style>
