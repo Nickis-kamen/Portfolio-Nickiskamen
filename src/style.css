@@ -1,0 +1,7 @@
+/* @
+@tailwind components;
+@tailwind utilities;tailwind base; */
+@import "tailwindcss";
+body{
+    overflow-x: hidden;
+}
