@@ -15,15 +15,16 @@ const toggleMobileMenu = () => {
 
 <template>
   <section
-    class="min-h-screen flex flex-col items-center justify-center text-center bg-cover bg-center bg-no-repeat"
-    :style="`background-image: url(${bg})`"
-  >
+    class="md:h-[100vh] flex flex-col items-center justify-center text-center bg-cover bg-center bg-no-repeat">
     <!-- Navbar -->
     <nav class="fixed top-0 left-0 px-6 py-4 z-50 backdrop-blur-md bg-black/50 shadow-sm w-full">
       <div class="w-full flex justify-between items-center max-w-6xl mx-auto">
         <!-- Logo -->
-        <div class="text-2xl md:text-3xl font-extrabold bg-gradient-to-r from-red-700 via-red-500 to-red-700 text-transparent bg-clip-text">
-          Nickis<span class="text-gray-300">Kamen</span>
+        <div class="-space-x-1">
+          <p class="inline text-2xl md:text-3xl font-extrabold bg-gradient-to-r from-red-700 via-red-500 to-red-700 text-transparent bg-clip-text">
+          Nickis
+          </p>
+          <span class="text-2xl md:text-3xl font-extrabold text-white">kamen</span>
         </div>
 
         <!-- Menu desktop -->
@@ -59,8 +60,14 @@ const toggleMobileMenu = () => {
 
 
     <!-- Contenu principal -->
-    <div class="bg-black/90 backdrop-blur-sm py-10 px-6 md:px-16 flex flex-col md:flex-row items-center justify-between gap-8 w-full min-h-screen pt-32">
+    <div class="relative bg-black/90 backdrop-blur-sm py-10 px-6 md:px-16 flex flex-col md:flex-row items-center justify-between gap-8 w-full min-h-screen pt-32">
       <!-- Texte -->
+       <img
+    :src="bg"
+    alt="background"
+    class="absolute inset-0 w-full h-full object-cover z-0"
+    />
+    <div class="absolute inset-0 bg-black/80 backdrop-blur-sm z-0"></div>
       <div
         data-aos="fade-right"
         data-aos-duration="800"

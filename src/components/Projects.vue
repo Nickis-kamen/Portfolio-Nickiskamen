@@ -36,8 +36,13 @@ const projects = [
 </script>
 
 <template>
-  <section id="projects" class=" bg-no-repeat bg-cover text-white" :style="`background-image: url(${bg})`">
-    <div class="bg-black/90 backdrop-blur-sm py-20 px-6">
+  <section id="projects" class="relative bg-no-repeat bg-cover text-white">
+    <!-- <img
+    :src="bg"
+    alt="background"
+    class="absolute inset-0 w-full h-full object-cover z-0"
+    /> -->
+    <div class="bg-black backdrop-blur-sm shadow-lg py-20 px-6">
       <div class="max-w-6xl mx-auto">
         <h2
           class="text-4xl md:text-5xl font-bold mb-16 text-center bg-gradient-to-r from-red-700 via-red-500 to-red-700 text-transparent bg-clip-text"

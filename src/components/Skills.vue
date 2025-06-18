@@ -1,4 +1,5 @@
 <script setup>
+import bg from '../assets/bg-red.gif'
 import html from '../assets/icons/html.png'
 import css from '../assets/icons/css.png'
 import js from '../assets/icons/js.png'
@@ -46,7 +47,12 @@ const skillGroups = [
 </script>
 
 <template>
-  <section id="skills" class="text-white bg-gray-900">
+  <section id="skills" class="relative text-white bg-gray-900">
+    <img
+    :src="bg"
+    alt="background"
+    class="absolute inset-0 w-full h-full object-cover z-0"
+    />
     <div class="bg-black/90 backdrop-blur-sm py-20">
       <div class="max-w-6xl mx-auto px-4">
         <h2
