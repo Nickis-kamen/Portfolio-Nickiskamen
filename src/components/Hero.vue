@@ -70,7 +70,7 @@ const toggleMobileMenu = () => {
           </span>
         </h1>
         <p class="text-lg md:text-lg text-gray-300 mb-8">
-          Développeur web spécialisé en <span class="text-red-500 font-semibold">Backend</span>, je conçois des architectures solides, sécurisées et évolutives. Mon expertise porte sur la gestion de bases de données complexes, ainsi que l’intégration fluide avec les interfaces front-end.
+          Développeur web spécialisé en <span class="text-red-500 font-semibold">Back-end</span>, je conçois des architectures solides, sécurisées et évolutives. Mon expertise porte sur la gestion de bases de données complexes, ainsi que l’intégration fluide avec les interfaces front-end.
         </p>
         <div class="flex flex-col sm:flex-row items-center gap-4 mt-4">
           <a
@@ -80,7 +80,7 @@ const toggleMobileMenu = () => {
             Voir mes projets
           </a>
           <a
-            href="/cv-nickis.pdf"
+            href="/src/assets/CV-kamen.pdf"
             download
             class="flex gap-2 px-6 py-3 bg-red-700 hover:bg-red-800 text-white font-medium rounded-full transition duration-300 shadow-md hover:shadow-lg"
           >

@@ -10,23 +10,23 @@ const projects = [
   {
     title: 'Marketplace Multivendeur',
     description: 'Marketplace multivendeur avec interface admin, paiements Stripe, et comptes vendeurs.',
-    image: 'https://source.unsplash.com/600x400/?ecommerce,code',
+    image: '/src/assets/market.png',
     tech: ['Laravel', 'Stripe', 'MySQL', 'Tailwind','Blade','AlpineJs'],
-    link: '#'
+    link: 'https://github.com/Nickis-kamen/Market-place-Hopes.git'
   },
   {
     title: 'Portfolio Personnel',
     description: 'Portfolio personnel avec sections projets, compétences, et contact.',
     image: '/src/assets/portfolio.png',
     tech: ['VueJs', 'Tailwind', 'Formspree', 'Vue3Toastify', 'AOS'],
-    link: 'https://github.com/Nickis-kamen/Portfolio-Nickiskamen'
+    link: 'https://github.com/Nickis-kamen/Portfolio-Nickiskamen.git'
   },
   {
     title: 'Réparation Auto',
     description: 'Vitrine pour service auto avec galerie, formulaire de contact, et prise de rendez-vous.',
-    image: 'https://source.unsplash.com/600x400/?car,garage',
+    image: '/src/assets/auto.png',
     tech: ['PHP', 'MySQL', 'HTML','CSS', 'JavaScript', 'Bootstrap'],
-    link: '#'
+    link: 'https://github.com/Nickis-kamen/Reparation-auto.git'
   }
 ]
 </script>
