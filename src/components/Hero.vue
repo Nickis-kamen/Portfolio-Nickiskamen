@@ -1,6 +1,8 @@
 <script setup>
 import { ref } from 'vue'
 import bg from '../assets/bg-red.gif'
+import cv from '../assets/CV-kamen.pdf'
+
 
 const showMobileMenu = ref(false)
 
@@ -80,7 +82,7 @@ const toggleMobileMenu = () => {
             Voir mes projets
           </a>
           <a
-            href="/src/assets/CV-kamen.pdf"
+            :href="cv"
             download
             class="flex gap-2 px-6 py-3 bg-red-700 hover:bg-red-800 text-white font-medium rounded-full transition duration-300 shadow-md hover:shadow-lg"
           >
@@ -102,7 +104,7 @@ const toggleMobileMenu = () => {
         <div class="w-56 h-56 md:w-90 md:h-90 relative">
           <div class="bg-red-800 opacity-20 blur-2xl absolute inset-0 rounded-full z-0"></div>
           <img
-            src="../assets/moi.png"
+            src="/src/assets/moi.png"
             alt="Nickis"
             class="relative z-10 w-full h-full object-contain drop-shadow-xl hover:scale-105 transition-transform duration-300 rounded-full shadow-lg"
           />

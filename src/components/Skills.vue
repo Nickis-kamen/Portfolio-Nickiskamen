@@ -1,34 +1,45 @@
 <script setup>
+import html from '../assets/icons/html.png'
+import css from '../assets/icons/css.png'
+import js from '../assets/icons/js.png'
+import php from '../assets/icons/php.png'
+import laravel from '../assets/icons/laravel.png'
+import vue from '../assets/icons/vue.png'
+import tailwind from '../assets/icons/tailwind.png'
+import git from '../assets/icons/git.png'
+import ps from '../assets/icons/ps.png'
+import mysql from '../assets/icons/mysql.png'
+
 
 const skillGroups = [
   {
     title: 'Langages',
     skills: [
-      { name: 'HTML', icon: '/src/assets/icons/html.png', percent: 70 },
-      { name: 'CSS', icon: '/src/assets/icons/css.png', percent: 60 },
-      { name: 'JavaScript', icon: '/src/assets/icons/js.png', percent: 40 },
-      { name: 'PHP', icon: '/src/assets/icons/php.png', percent: 68 }
+      { name: 'HTML', icon: html, percent: 70 },
+      { name: 'CSS', icon: css, percent: 60 },
+      { name: 'JavaScript', icon: js, percent: 40 },
+      { name: 'PHP', icon: php, percent: 68 }
     ]
   },
   {
     title: 'Frameworks',
     skills: [
-      { name: 'Laravel', icon: '/src/assets/icons/laravel.png', percent: 72 },
-      { name: 'Vue.Js', icon: '/src/assets/icons/vue.png', percent: 45 },
-      { name: 'TailwindCSS', icon: '/src/assets/icons/tailwind.png', percent: 65 }
+      { name: 'Laravel', icon: laravel, percent: 72 },
+      { name: 'Vue.Js', icon: vue, percent: 45 },
+      { name: 'TailwindCSS', icon: tailwind, percent: 65 }
     ]
   },
   {
     title: 'Outils & Design',
     skills: [
-      { name: 'Git', icon: '/src/assets/icons/git.png', percent: 40 },
-      { name: 'Photoshop', icon: '/src/assets/icons/ps.png', percent: 50 }
+      { name: 'Git', icon: git, percent: 40 },
+      { name: 'Photoshop', icon: ps, percent: 50 }
     ]
   },
   {
     title: 'Base de données',
     skills: [
-      { name: 'MySQL', icon: '/src/assets/icons/mysql.png', percent: 55 }
+      { name: 'MySQL', icon: mysql, percent: 55 }
     ]
   }
 ]

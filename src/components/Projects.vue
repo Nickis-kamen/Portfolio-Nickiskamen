@@ -1,5 +1,9 @@
 <script setup>
 import bg from '../assets/bg-red.gif'
+import market from '../assets/market.png'
+import portfolio from '../assets/portfolio.png'
+import auto from '../assets/auto.png'
+
 const getAnimation = (index) => {
   if (index % 3 === 0) return 'fade-right'
   if (index % 3 === 1) return 'zoom-in'
@@ -10,21 +14,21 @@ const projects = [
   {
     title: 'Marketplace Multivendeur',
     description: 'Marketplace multivendeur avec interface admin, paiements Stripe, et comptes vendeurs.',
-    image: '/src/assets/market.png',
+    image: market,
     tech: ['Laravel', 'Stripe', 'MySQL', 'Tailwind','Blade','AlpineJs'],
     link: 'https://github.com/Nickis-kamen/Market-place-Hopes.git'
   },
   {
     title: 'Portfolio Personnel',
     description: 'Portfolio personnel avec sections projets, compétences, et contact.',
-    image: '/src/assets/portfolio.png',
+    image: portfolio,
     tech: ['VueJs', 'Tailwind', 'Formspree', 'Vue3Toastify', 'AOS'],
     link: 'https://github.com/Nickis-kamen/Portfolio-Nickiskamen.git'
   },
   {
     title: 'Réparation Auto',
     description: 'Vitrine pour service auto avec galerie, formulaire de contact, et prise de rendez-vous.',
-    image: '/src/assets/auto.png',
+    image: auto,
     tech: ['PHP', 'MySQL', 'HTML','CSS', 'JavaScript', 'Bootstrap'],
     link: 'https://github.com/Nickis-kamen/Reparation-auto.git'
   }
