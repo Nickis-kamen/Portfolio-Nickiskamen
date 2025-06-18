@@ -2,6 +2,7 @@
 import { ref } from 'vue'
 import bg from '../assets/bg-red.gif'
 import cv from '../assets/CV-kamen.pdf'
+import moi from '../assets/moi.png'
 
 
 const showMobileMenu = ref(false)
@@ -14,12 +15,12 @@ const toggleMobileMenu = () => {
 
 <template>
   <section
-    class="relative min-h-screen flex flex-col items-center justify-center text-center bg-cover bg-center bg-no-repeat"
+    class="min-h-screen flex flex-col items-center justify-center text-center bg-cover bg-center bg-no-repeat"
     :style="`background-image: url(${bg})`"
   >
     <!-- Navbar -->
-    <nav class="fixed top-0 left-0 w-full px-6 py-4 z-50 backdrop-blur-md bg-black/50 shadow-sm">
-      <div class="flex justify-between items-center max-w-7xl mx-auto">
+    <nav class="fixed top-0 left-0 px-6 py-4 z-50 backdrop-blur-md bg-black/50 shadow-sm w-full">
+      <div class="w-full flex justify-between items-center max-w-6xl mx-auto">
         <!-- Logo -->
         <div class="text-2xl md:text-3xl font-extrabold bg-gradient-to-r from-red-700 via-red-500 to-red-700 text-transparent bg-clip-text">
           Nickis<span class="text-gray-300">Kamen</span>
@@ -34,6 +35,7 @@ const toggleMobileMenu = () => {
         </ul>
 
         <!-- Bouton mobile -->
+
         <button @click="toggleMobileMenu" class="md:hidden text-white focus:outline-none">
           <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
@@ -104,7 +106,7 @@ const toggleMobileMenu = () => {
         <div class="w-56 h-56 md:w-90 md:h-90 relative">
           <div class="bg-red-800 opacity-20 blur-2xl absolute inset-0 rounded-full z-0"></div>
           <img
-            src="/src/assets/moi.png"
+            :src="moi"
             alt="Nickis"
             class="relative z-10 w-full h-full object-contain drop-shadow-xl hover:scale-105 transition-transform duration-300 rounded-full shadow-lg"
           />

@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;tailwind base; */
 @import "tailwindcss";
-body{
-    overflow-x: hidden;
+html, body {
+  overflow-x: hidden;
 }
+
+
+/* * {
+  outline: 1px solid red !important;
+} */

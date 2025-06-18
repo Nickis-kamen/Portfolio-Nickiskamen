@@ -6,7 +6,7 @@ import Footer from './components/Footer.vue'
 import Skills from './components/Skills.vue'
 </script>
 <template>
-  <main class="relative">
+  <main class="">
     <Hero />
     <Projects />
     <Skills />

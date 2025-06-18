@@ -36,7 +36,7 @@ const projects = [
 </script>
 
 <template>
-  <section id="projects" class="bg-no-repeat bg-cover text-white" :style="`background-image: url(${bg})`">
+  <section id="projects" class=" bg-no-repeat bg-cover text-white" :style="`background-image: url(${bg})`">
     <div class="bg-black/90 backdrop-blur-sm py-20 px-6">
       <div class="max-w-6xl mx-auto">
         <h2
