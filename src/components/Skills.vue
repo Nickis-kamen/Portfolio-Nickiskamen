@@ -16,18 +16,18 @@ const skillGroups = [
   {
     title: 'Langages',
     skills: [
-      { name: 'HTML', icon: html, percent: 70 },
-      { name: 'CSS', icon: css, percent: 60 },
-      { name: 'JavaScript', icon: js, percent: 40 },
-      { name: 'PHP', icon: php, percent: 68 }
+      { name: 'HTML', icon: html, percent: 62 },
+      { name: 'CSS', icon: css, percent: 64 },
+      { name: 'JavaScript', icon: js, percent: 41 },
+      { name: 'PHP', icon: php, percent: 66 }
     ]
   },
   {
     title: 'Frameworks',
     skills: [
-      { name: 'Laravel', icon: laravel, percent: 72 },
-      { name: 'Vue.Js', icon: vue, percent: 45 },
-      { name: 'TailwindCSS', icon: tailwind, percent: 65 }
+      { name: 'Laravel', icon: laravel, percent: 52 },
+      { name: 'Vue.Js', icon: vue, percent: 42 },
+      { name: 'TailwindCSS', icon: tailwind, percent: 66 }
     ]
   },
   {
@@ -40,7 +40,7 @@ const skillGroups = [
   {
     title: 'Base de données',
     skills: [
-      { name: 'MySQL', icon: mysql, percent: 55 }
+      { name: 'MySQL', icon: mysql, percent: 52 }
     ]
   }
 ]
