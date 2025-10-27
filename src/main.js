@@ -5,7 +5,6 @@ import AOS from 'aos'
 import 'aos/dist/aos.css'
 import Vue3Toastify from 'vue3-toastify'
 import 'vue3-toastify/dist/index.css'
-import VueParticles from 'vue3-particles'
 
 AOS.init()
 
@@ -16,7 +15,6 @@ app.use(Vue3Toastify, {
   position: "top-right",
   theme: 'dark',
 })
-app.use(VueParticles)
 
 app.mount('#app')
 
