@@ -20,12 +20,14 @@ const toggleMobileMenu = () => {
     <nav class="fixed top-0 left-0 px-6 py-4 z-50 backdrop-blur-sm shadow-sm w-full">
       <div class="w-full flex justify-between items-center max-w-6xl mx-auto">
         <!-- Logo -->
-        <div class="-space-x-1">
-          <p class="inline text-2xl md:text-3xl font-extrabold bg-gradient-to-r from-red-700 via-red-500 to-red-700 text-transparent bg-clip-text">
-          Nickis
-          </p>
-          <span class="text-2xl md:text-3xl font-extrabold text-white">kamen</span>
-        </div>
+        <a href="#">
+          <div class="-space-x-1">
+            <p class="inline text-2xl md:text-3xl font-extrabold bg-gradient-to-r from-red-700 via-red-500 to-red-700 text-transparent bg-clip-text">
+            Nickis
+            </p>
+            <span class="text-2xl md:text-3xl font-extrabold text-white">kamen</span>
+          </div>
+        </a>
 
         <!-- Menu desktop -->
         <ul class="hidden md:flex gap-8 text-sm md:text-base text-white font-medium">
@@ -66,13 +68,13 @@ const toggleMobileMenu = () => {
         data-aos-easing="ease-out-back"
         class="w-full md:w-2/3 text-left"
       >
-        <h1 class="text-3xl md:text-5xl font-bold text-white mb-6">
+        <h1 class="text-3xl text-center md:text-left md:text-5xl font-bold text-white mb-4 md:mb-10">
           Salut, je suis
           <span class="bg-gradient-to-r from-red-700 via-red-500 to-red-700 text-transparent bg-clip-text font-bold">
             Nickiskamen
           </span>
         </h1>
-        <p class="text-lg md:text-lg text-gray-300 mb-8">
+        <p class="text-center md:text-left text-lg text-gray-300 mb-8">
           Développeur web spécialisé en <span class="text-red-500 font-semibold">Back-end</span>, je conçois des architectures solides, sécurisées et évolutives. Mon expertise porte sur la gestion de bases de données complexes, ainsi que l'intégration fluide avec les interfaces front-end.
         </p>
         <div class="flex flex-col sm:flex-row items-center gap-4 mt-4">

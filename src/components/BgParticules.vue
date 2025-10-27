@@ -8,11 +8,9 @@ import { onMounted, ref } from 'vue';
 const particlesLoaded = ref(false);
 
 onMounted(() => {
-  // Vérifier si particles.js est déjà chargé
   if (window.particlesJS) {
     initParticles();
   } else {
-    // Charger particles.js
     const script = document.createElement('script');
     script.src = 'https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js';
     script.onload = () => {
@@ -90,6 +88,12 @@ const initParticles = () => {
           enable: true,
           mode: 'repulse'
         },
+        // Ajout des événements tactiles pour mobile
+        ondiv: {
+          enable: true,
+          mode: 'grab',
+          type: 'touch'
+        },
         resize: true
       },
       modes: {
@@ -132,11 +136,16 @@ const initParticles = () => {
   height: 100%;
   background-color: #000000;
   z-index: 1;
+  /* Important pour les interactions tactiles */
+  touch-action: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
 #particles-js {
   width: 100%;
   height: 100%;
   background-color: #000000;
+  /* Assurer que l'élément capture les événements tactiles */
+  pointer-events: all;
 }
 </style>

@@ -50,11 +50,11 @@ const skillGroups = [
 </script>
 
 <template>
-  <section id="skills" class="min-h-screen py-20 ">
+  <section id="skills" class="relative min-h-screen py-20 ">
     <div class="py-20">
       <div class="max-w-5xl mx-auto px-4">
         <h2
-          class="text-4xl md:text-5xl font-bold mb-20 text-center bg-gradient-to-r from-red-600 via-red-500 to-red-600 text-transparent bg-clip-text"
+          class="text-4xl md:text-5xl font-bold mb-20 text-center bg-gradient-to-r from-red-700 via-red-500 to-red-700 text-transparent bg-clip-text"
           data-aos="fade-up"
         >
           Mes Compétences
