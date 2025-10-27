@@ -1,0 +1,142 @@
+<template>
+  <div id="particles-js" class="particles-container"></div>
+</template>
+
+<script setup>
+import { onMounted, ref } from 'vue';
+
+const particlesLoaded = ref(false);
+
+onMounted(() => {
+  // Vérifier si particles.js est déjà chargé
+  if (window.particlesJS) {
+    initParticles();
+  } else {
+    // Charger particles.js
+    const script = document.createElement('script');
+    script.src = 'https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js';
+    script.onload = () => {
+      console.log('Particles.js loaded');
+      initParticles();
+    };
+    script.onerror = () => {
+      console.error('Failed to load particles.js');
+    };
+    document.head.appendChild(script);
+  }
+});
+
+const initParticles = () => {
+  particlesJS('particles-js', {
+    particles: {
+      number: {
+        value: 80,
+        density: {
+          enable: true,
+          value_area: 800
+        }
+      },
+      color: {
+        value: '#dc2626'
+      },
+      shape: {
+        type: 'circle'
+      },
+      opacity: {
+        value: 0.7,
+        random: true,
+        anim: {
+          enable: true,
+          speed: 1,
+          opacity_min: 0.1,
+          sync: false
+        }
+      },
+      size: {
+        value: 4,
+        random: true,
+        anim: {
+          enable: true,
+          speed: 2,
+          size_min: 0.1,
+          sync: false
+        }
+      },
+      line_linked: {
+        enable: true,
+        distance: 150,
+        color: '#dc2626',
+        opacity: 0.4,
+        width: 1
+      },
+      move: {
+        enable: true,
+        speed: 2,
+        direction: 'none',
+        random: true,
+        straight: false,
+        out_mode: 'out',
+        bounce: false
+      }
+    },
+    interactivity: {
+      detect_on: 'window',
+      events: {
+        onhover: {
+          enable: true,
+          mode: 'grab'
+        },
+        onclick: {
+          enable: true,
+          mode: 'repulse'
+        },
+        resize: true
+      },
+      modes: {
+        grab: {
+          distance: 140,
+          line_linked: {
+            opacity: 1
+          }
+        },
+        bubble: {
+          distance: 100,
+          size: 0,
+          duration: 0.3,
+          opacity: 0,
+          speed: 3
+        },
+        repulse: {
+          distance: 25,
+          duration: 0.5
+        },
+        push: {
+          particles_nb: 4
+        }
+      }
+    },
+    retina_detect: true
+  });
+
+  particlesLoaded.value = true;
+  console.log('Particles initialized');
+};
+</script>
+
+<style scoped>
+.particles-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  z-index: 1;
+}
+
+#particles-js {
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+}
+</style>

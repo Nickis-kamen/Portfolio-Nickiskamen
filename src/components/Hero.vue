@@ -1,9 +1,8 @@
 <script setup>
 import { ref } from 'vue'
-import bg from '../assets/bg-red.gif'
-import cv from '../assets/CV-kamen.pdf'
+import cv from '../assets/CV-Kamen.pdf'
 import moi from '../assets/moi.png'
-
+import BgParticules from './BgParticules.vue'
 
 const showMobileMenu = ref(false)
 
@@ -12,12 +11,13 @@ const toggleMobileMenu = () => {
 }
 </script>
 
-
 <template>
-  <section
-    class="md:h-[100vh] flex flex-col items-center justify-center text-center bg-cover bg-center bg-no-repeat">
+  <section class="md:h-[100vh] flex flex-col items-center justify-center text-center relative overflow-hidden">
+    <!-- Particules en arrière-plan -->
+    <!-- <BgParticules /> -->
+    
     <!-- Navbar -->
-    <nav class="fixed top-0 left-0 px-6 py-4 z-50 backdrop-blur-md bg-black/50 shadow-sm w-full">
+    <nav class="fixed top-0 left-0 px-6 py-4 z-50 backdrop-blur-sm shadow-sm w-full">
       <div class="w-full flex justify-between items-center max-w-6xl mx-auto">
         <!-- Logo -->
         <div class="-space-x-1">
@@ -36,7 +36,6 @@ const toggleMobileMenu = () => {
         </ul>
 
         <!-- Bouton mobile -->
-
         <button @click="toggleMobileMenu" class="md:hidden text-white focus:outline-none">
           <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
@@ -58,16 +57,9 @@ const toggleMobileMenu = () => {
       </transition>
     </nav>
 
-
     <!-- Contenu principal -->
-    <div class="relative bg-black/90 backdrop-blur-sm py-10 px-6 md:px-16 flex flex-col md:flex-row items-center justify-between gap-8 w-full min-h-screen pt-32">
+    <div class="relative py-10 px-6 md:px-16 flex flex-col md:flex-row items-center justify-between gap-8 w-full min-h-screen pt-32 z-20">
       <!-- Texte -->
-       <img
-    :src="bg"
-    alt="background"
-    class="absolute inset-0 w-full h-full object-cover z-0"
-    />
-    <div class="absolute inset-0 bg-black/80 backdrop-blur-sm z-0"></div>
       <div
         data-aos="fade-right"
         data-aos-duration="800"
@@ -81,12 +73,12 @@ const toggleMobileMenu = () => {
           </span>
         </h1>
         <p class="text-lg md:text-lg text-gray-300 mb-8">
-          Développeur web spécialisé en <span class="text-red-500 font-semibold">Back-end</span>, je conçois des architectures solides, sécurisées et évolutives. Mon expertise porte sur la gestion de bases de données complexes, ainsi que l’intégration fluide avec les interfaces front-end.
+          Développeur web spécialisé en <span class="text-red-500 font-semibold">Back-end</span>, je conçois des architectures solides, sécurisées et évolutives. Mon expertise porte sur la gestion de bases de données complexes, ainsi que l'intégration fluide avec les interfaces front-end.
         </p>
         <div class="flex flex-col sm:flex-row items-center gap-4 mt-4">
           <a
             href="#projects"
-            class="px-6 py-3 hover:bg-red-700 hover:text-white bg-white text-red-700 font-medium rounded-full transition"
+            class="px-6 py-3 hover:bg-red-700 hover:text-white bg-white text-red-700 font-medium rounded-full transition duration-300"
           >
             Voir mes projets
           </a>
@@ -130,5 +122,4 @@ const toggleMobileMenu = () => {
 .fade-enter-from, .fade-leave-to {
   opacity: 0;
 }
-
 </style>

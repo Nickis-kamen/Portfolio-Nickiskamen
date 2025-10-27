@@ -1,5 +1,5 @@
 <script setup>
-  import bg from '../assets/bg-red.gif'
+  // import bg from '../assets/bg-red.gif'
   import { ref } from 'vue'
   import { toast } from 'vue3-toastify'
   import 'vue3-toastify/dist/index.css'
