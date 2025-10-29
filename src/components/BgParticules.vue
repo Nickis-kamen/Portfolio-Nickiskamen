@@ -28,7 +28,7 @@ const initParticles = () => {
   particlesJS('particles-js', {
     particles: {
       number: {
-        value: 80,
+        value: 120,
         density: {
           enable: true,
           value_area: 800
@@ -129,23 +129,25 @@ const initParticles = () => {
 
 <style scoped>
 .particles-container {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   background-color: #000000;
   z-index: 1;
-  /* Important pour les interactions tactiles */
   touch-action: none;
   -webkit-tap-highlight-color: transparent;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
 }
 
 #particles-js {
   width: 100%;
   height: 100%;
   background-color: #000000;
-  /* Assurer que l'élément capture les événements tactiles */
   pointer-events: all;
+  transform: translate3d(0, 0, 0);
 }
 </style>
